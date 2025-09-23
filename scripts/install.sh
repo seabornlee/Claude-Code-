@@ -52,6 +52,7 @@ declare -a AGENTS=(
     "technology-architect.md"
     "project-management-master.md"
     "data-science-advisor.md"
+    "execution-expert.md"
     "facilitator.md"
     "coach.md"
     "critical-thinker.md"
@@ -139,6 +140,11 @@ cat > "$CLAUDE_CONFIG_DIR/agents.json" << 'EOF'
       "name": "哲学专家",
       "description": "全子理论、垂直三位一体理论、整合哲学专家",
       "file": "agents/philosopher.md"
+    },
+    "execution-expert": {
+      "name": "执行力专家",
+      "description": "高效执行四原则(4DX)框架专家，专注于将战略转化为成果",
+      "file": "agents/execution-expert.md"
     }
   },
   "protocols": {
@@ -167,6 +173,7 @@ echo "   - 设计专家 (design-expert)"
 echo "   - 技术架构师 (technology-architect)"
 echo "   - 项目管理大师 (project-management-master)"
 echo "   - 数据科学顾问 (data-science-advisor)"
+echo "   - 执行力专家 (execution-expert)"
 echo "   - 引导者 (facilitator)"
 echo "   - 教练 (coach)"
 echo "   - 批判者 (critical-thinker)"

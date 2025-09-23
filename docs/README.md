@@ -2,11 +2,11 @@
 
 ## 🌟 项目简介
 
-Claude Code 智囊团系统是一个包含 10 个专业化 agents 的集体智能平台，通过结构化协作流程和多样化的思维角度，为复杂问题提供系统性的思考解决方案。
+Claude Code 智囊团系统是一个包含 11 个专业化 agents 的集体智能平台，通过结构化协作流程和多样化的思维角度，为复杂问题提供系统性的思考解决方案。
 
 ### 系统特色
 
-- **10个专业化 agents**: 涵盖商业、技术、管理、数据等多个领域
+- **11个专业化 agents**: 涵盖商业、技术、管理、数据、执行等多个领域
 - **结构化协作**: 智能的 agent 间协作机制
 - **灵活调用**: 支持 Claude Code 中的便捷调用
 - **协议驱动**: 标准化的思考流程和讨论方法
@@ -46,7 +46,7 @@ Claude Code 智囊团系统是一个包含 10 个专业化 agents 的集体智�
 
 ## 👥 Agents 介绍
 
-### 专家角色 (5个)
+### 专家角色 (6个)
 
 #### 📊 业务战略家 (business-strategist)
 - **专长**: 商业模式创新、市场分析、战略规划
@@ -72,6 +72,11 @@ Claude Code 智囊团系统是一个包含 10 个专业化 agents 的集体智�
 - **专长**: 数据分析、预测建模、洞察提取
 - **适用场景**: 数据分析、预测模型、商业智能
 - **调用方式**: `@data-science-advisor`
+
+#### 🎯 执行力专家 (execution-expert)
+- **专长**: 高效执行四原则(4DX)、目标实现、运营纪律
+- **适用场景**: 战略执行、目标管理、团队执行力提升
+- **调用方式**: `@execution-expert`
 
 ### 协作角色 (5个)
 
@@ -117,6 +122,7 @@ Claude Code 智囊团系统是一个包含 10 个专业化 agents 的集体智�
 ### 1. 选择合适的 Agent
 - **商业决策** → `@business-strategist`
 - **技术问题** → `@technology-architect`
+- **执行落地** → `@execution-expert`
 - **团队协作** → `@facilitator`
 - **方案验证** → `@critical-thinker`
 - **综合分析** → `@integrator`
@@ -149,7 +155,7 @@ Claude Code 智囊团系统是一个包含 10 个专业化 agents 的集体智�
 ### 自定义 Agent 组合
 ```bash
 # 创建特定的专家组合
-@facilitator 请邀请 business-strategist, technology-architect, design-expert 参与讨论
+@facilitator 请邀请 business-strategist, execution-expert, technology-architect, design-expert 参与讨论
 ```
 
 ### 协议驱动的工作流
