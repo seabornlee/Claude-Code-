@@ -9,8 +9,8 @@ echo "🚀 Claude Code Agents 安装程序"
 echo "================================"
 
 # 检查是否在正确的目录
-if [ ! -f "business-strategist.md" ]; then
-    echo "❌ 错误: 请在包含智囊团文件的目录中运行此脚本"
+if [ ! -f "agents/business-strategist.md" ]; then
+    echo "❌ 错误: 请在智囊团项目根目录中运行此脚本"
     exit 1
 fi
 
@@ -47,36 +47,38 @@ echo "📁 命令目录: $COMMANDS_DIR"
 
 # 定义要复制的 agents
 declare -a AGENTS=(
-    "business-strategist.md"
-    "design-expert.md"
-    "technology-architect.md"
-    "project-management-master.md"
-    "data-science-advisor.md"
-    "execution-expert.md"
-    "facilitator.md"
-    "coach.md"
-    "critical-thinker.md"
-    "integrator.md"
-    "observer.md"
-    "philosopher.md"
-    "think-tank-protocol.md"
-    "discussion-methodologies.md"
+    "agents/business-strategist.md"
+    "agents/design-expert.md"
+    "agents/technology-architect.md"
+    "agents/project-management-master.md"
+    "agents/data-science-advisor.md"
+    "agents/execution-expert.md"
+    "agents/facilitator.md"
+    "agents/coach.md"
+    "agents/critical-thinker.md"
+    "agents/integrator.md"
+    "agents/observer.md"
+    "agents/philosopher.md"
+    "protocols/think-tank-protocol.md"
+    "protocols/discussion-methodologies.md"
 )
 
 # 复制 agent 文件
 echo "📦 复制 agents..."
 for agent in "${AGENTS[@]}"; do
     if [ -f "$agent" ]; then
+        # 获取文件名（去掉路径）
+        filename=$(basename "$agent")
         cp "$agent" "$AGENTS_DIR/"
-        echo "✅ 安装: $agent"
+        echo "✅ 安装: $filename"
     else
         echo "⚠️  警告: $agent 不存在"
     fi
 done
 
 # 复制 facilitator 作为斜杠命令
-if [ -f "facilitator.md" ]; then
-    cp "facilitator.md" "$COMMANDS_DIR/facilitator.md"
+if [ -f "agents/facilitator.md" ]; then
+    cp "agents/facilitator.md" "$COMMANDS_DIR/facilitator.md"
     echo "✅ 安装斜杠命令: /facilitator"
 else
     echo "⚠️  警告: facilitator.md 不存在"
